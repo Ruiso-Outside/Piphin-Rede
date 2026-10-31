@@ -1,0 +1,40 @@
+{
+  "id": "rede",
+  "name": "Piphin Rede",
+  "version": "0.0.0",
+  "description": "Vê tudo da sua rede: sinal e frequências do Wi-Fi, canais, uso ao vivo, aparelhos conectados e testes de ping, DNS e velocidade. Explica o que está deixando a internet lenta.",
+  "main": "backend.js",
+  "ui": "web/index.html",
+  "icon": "icons/rede.png",
+  "accent": "#14b8a6",
+  "minHub": "1.4.0",
+  "tools": [
+    {
+      "name": "network_status",
+      "title": "Ver a conexão",
+      "readOnly": true,
+      "description": "Mostra a conexão de rede do PC (só leitura): tipo (Wi-Fi ou cabo), placa, velocidade do link, IP, roteador, DNS, VPN e, no Wi-Fi, nome da rede, faixa (2,4/5/6 GHz), canal, sinal em % e dBm, geração do Wi-Fi e segurança.",
+      "input": { "type": "object", "properties": {} }
+    },
+    {
+      "name": "network_diagnose",
+      "title": "Diagnosticar a rede",
+      "readOnly": true,
+      "description": "Descobre o que pode estar deixando a rede lenta (só leitura, uns 15 segundos): sinal e faixa do Wi-Fi, canal congestionado, ping e perda até o roteador e a internet, DNS lento, Windows Update baixando, torrents, VPN e uso alto agora. Devolve uma nota de 0 a 100 e cada problema com o que fazer.",
+      "input": { "type": "object", "properties": {} }
+    },
+    {
+      "name": "wifi_networks",
+      "title": "Redes Wi-Fi por perto",
+      "readOnly": true,
+      "description": "Lista as redes Wi-Fi por perto com faixa, canal, frequência, largura do canal, sinal, geração do Wi-Fi e segurança, quantos vizinhos dividem o canal da rede atual e o canal mais livre para configurar no roteador.",
+      "input": { "type": "object", "properties": {} }
+    },
+    {
+      "name": "speed_test",
+      "title": "Testar a velocidade da internet",
+      "description": "Mede download, upload e ping usando os servidores da Cloudflare (uns 15 segundos). A pessoa confirma antes numa janela.",
+      "input": { "type": "object", "properties": {} }
+    }
+  ]
+}
